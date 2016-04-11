@@ -1,0 +1,34 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+
+  "globals": {
+    "globals": true,
+    "ApiBase": true
+  },
+
+  "ecmaFeatures": { modules: true },
+
+  "extends": "eslint:recommended",
+
+  "rules": {
+    "arrow-parens": [1, "always"],
+    "arrow-spacing": 1,
+    "comma-dangle": 0,
+    "no-console": 1,
+    "no-const-assign": 2,
+    "no-debugger": 1,
+    "no-unused-vars": 1,
+    "no-var": 2,
+    "object-shorthand": [1, "always"],
+    "prefer-arrow-callback": 1,
+    "prefer-const": 1,
+    "quotes": [1, "single"],
+    "semi": [1, "never"],
+    "space-before-function-paren": [1, "never"],
+    "strict": [1, "global"]
+  }
+}
