@@ -10274,6 +10274,14 @@
 	      if (scrollingDown ? offset < 100 : offset > 10) {
 	        breakLoop = true;
 	        focused = l;
+
+	        if (l === 'ricks') {
+	          l = 'beggars';
+	          _map.locs[l].marker.set('labelText', locKeys.length);
+	        } else if (l === 'beggars') {
+	          _map.locs[l].marker.set('labelText', '1');
+	        }
+
 	        (0, _map.focusLoc)(l);
 	        (0, _map.getMap)().panTo(_map.locs[l].marker.getPosition());
 	      }

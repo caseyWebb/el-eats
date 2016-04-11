@@ -29,6 +29,14 @@ $(() => {
       if (scrollingDown ? offset < 100 : offset > 10) {
         breakLoop = true
         focused = l
+        
+        if (l === 'ricks') {
+          l = 'beggars'
+          locs[l].marker.set('labelText', locKeys.length)
+        } else if (l === 'beggars') {
+          locs[l].marker.set('labelText', '1')
+        }
+
         focusLoc(l)
         getMap().panTo(locs[l].marker.getPosition())
       }
