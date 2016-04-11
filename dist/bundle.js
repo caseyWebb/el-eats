@@ -10277,9 +10277,19 @@
 
 	        if (l === 'ricks') {
 	          l = 'beggars';
-	          _map.locs[l].marker.set('labelText', locKeys.length);
+	          _map.locs[l].marker.setLabel({
+	            text: locKeys.length + '',
+	            fontSize: '16px',
+	            fontWeight: '600',
+	            color: 'rgba(255,255,255,0.8)'
+	          });
 	        } else if (l === 'beggars') {
-	          _map.locs[l].marker.set('labelText', '1');
+	          _map.locs[l].marker.setLabel({
+	            text: '1',
+	            fontSize: '16px',
+	            fontWeight: '600',
+	            color: 'rgba(255,255,255,0.8)'
+	          });
 	        }
 
 	        (0, _map.focusLoc)(l);

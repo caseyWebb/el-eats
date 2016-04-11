@@ -29,12 +29,22 @@ $(() => {
       if (scrollingDown ? offset < 100 : offset > 10) {
         breakLoop = true
         focused = l
-        
+
         if (l === 'ricks') {
           l = 'beggars'
-          locs[l].marker.set('labelText', locKeys.length)
+          locs[l].marker.setLabel({
+            text: locKeys.length + '',
+            fontSize: '16px',
+            fontWeight: '600',
+            color: 'rgba(255,255,255,0.8)'
+          })
         } else if (l === 'beggars') {
-          locs[l].marker.set('labelText', '1')
+          locs[l].marker.setLabel({
+            text:  '1',
+            fontSize: '16px',
+            fontWeight: '600',
+            color: 'rgba(255,255,255,0.8)'
+          })
         }
 
         focusLoc(l)
