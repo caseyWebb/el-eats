@@ -150,6 +150,7 @@
 	function focusLoc(loc) {
 	  var m = locs[loc].marker;
 	  m.setAnimation(g.maps.Animation.BOUNCE);
+	  m.setZIndex(999);
 	  setTimeout(function () {
 	    return m.setAnimation(null);
 	  }, 1400);

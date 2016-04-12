@@ -33,7 +33,7 @@ GoogleMapsLoader.load((google) => {
     if (!l) {
       return
     }
-    
+
     const { coordinates: [lat, lng] } = l
 
     const icon = {
@@ -66,6 +66,7 @@ export function getMap() {
 export function focusLoc(loc) {
   const m = locs[loc].marker
   m.setAnimation(g.maps.Animation.BOUNCE)
+  m.setZIndex(999)
   setTimeout(() => m.setAnimation(null), 1400)
 }
 
