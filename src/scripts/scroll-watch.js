@@ -24,9 +24,10 @@ $(() => {
         breakLoop = true
         return
       }
+
       const offset = $(`.card.${l}`, $container).offset().top
 
-      if (scrollingDown ? offset < 100 : offset > 10) {
+      if (scrollingDown ? offset < 300 : offset > 10) {
         breakLoop = true
         focused = l
 
