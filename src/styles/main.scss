@@ -22,6 +22,11 @@ article.content {
   width: 400px;
   font-family: 'Open Sans', sans-serif;
 
+  @media (max-width: 500px) {
+    margin-left: 0;
+    width: 100%;
+  }
+
   .headline {
     margin-top: 0;
     margin-bottom: 10px;
